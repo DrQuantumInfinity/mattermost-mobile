@@ -17,10 +17,7 @@ import SettingsItem from 'app/screens/settings/settings_item';
 import StatusBar from 'app/components/status_bar';
 import {preventDoubleTap} from 'app/utils/tap';
 import {changeOpacity, makeStyleSheetFromTheme} from 'app/utils/theme';
-import {isValidUrl} from 'app/utils/url';
 import {t} from 'app/utils/i18n';
-
-// import LocalConfig from 'assets/config';
 
 class Settings extends PureComponent {
     static propTypes = {
@@ -164,10 +161,9 @@ class Settings extends PureComponent {
     });
 
     render() {
-        const {config, joinableTeams, theme, isLandscape} = this.props;
+        const {joinableTeams, theme, isLandscape} = this.props;
         const style = getStyleSheet(theme);
         const showTeams = joinableTeams.length > 0;
-        // const showHelp = isValidUrl(config.HelpLink);
         const showArrow = Platform.OS === 'ios';
 
         return (
@@ -215,32 +211,6 @@ class Settings extends PureComponent {
                         />
                     </React.Fragment>
                     }
-                    {/* {showHelp &&
-                    <React.Fragment>
-                        <SettingsItem
-                            defaultMessage='Help'
-                            i18nId={t('mobile.help.title')}
-                            iconName='md-help'
-                            iconType='ion'
-                            onPress={this.openHelp}
-                            showArrow={showArrow}
-                            theme={theme}
-                            separator={true}
-                            isLandscape={isLandscape}
-                        />
-                    </React.Fragment>
-                    }
-                     <SettingsItem
-                        defaultMessage='Report a Problem'
-                        i18nId={t('sidebar_right_menu.report')}
-                        iconName='exclamation'
-                        iconType='fontawesome'
-                        onPress={this.openErrorEmail}
-                        showArrow={showArrow}
-                        theme={theme}
-                        separator={true}
-                        isLandscape={isLandscape}
-                    /> */}
                     <SettingsItem
                         defaultMessage='Advanced Settings'
                         i18nId={t('mobile.advanced_settings.title')}
@@ -252,33 +222,6 @@ class Settings extends PureComponent {
                         separator={true}
                         isLandscape={isLandscape}
                     />
-                    {/* {LocalConfig.EnableMobileClientUpgrade && LocalConfig.EnableMobileClientUpgradeUserSetting &&
-                    <React.Fragment>
-                        <SettingsItem
-                            defaultMessage='Check for Upgrade'
-                            i18nId={t('mobile.settings.modal.check_for_upgrade')}
-                            iconName='update'
-                            iconType='material'
-                            onPress={this.goToClientUpgrade}
-                            showArrow={showArrow}
-                            theme={theme}
-                            separator={true}
-                            isLandscape={isLandscape}
-                        />
-                    </React.Fragment>
-                    }
-                    <SettingsItem
-                        defaultMessage='About {appTitle}'
-                        messageValues={{appTitle: config.SiteName || 'Ares AIM'}}
-                        i18nId={t('about.title')}
-                        iconName='ios-information-circle'
-                        iconType='ion'
-                        onPress={this.goToAbout}
-                        separator={false}
-                        showArrow={showArrow}
-                        theme={theme}
-                        isLandscape={isLandscape}
-                    /> */}
                     <View style={style.divider}/>
                 </ScrollView>
             </View>
