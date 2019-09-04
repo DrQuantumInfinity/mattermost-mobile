@@ -16,7 +16,7 @@ export default class AppIcon extends PureComponent {
         return (
             <Image
                 style={{width: this.props.width, height: this.props.height}}
-                source={require('assets/base/images/logo.png')}
+                source={require('assets/images/logo.png')}
             />
         );
     }
