@@ -215,7 +215,7 @@ class Settings extends PureComponent {
                         />
                     </React.Fragment>
                     }
-                    {showHelp &&
+                    {/* {showHelp &&
                     <React.Fragment>
                         <SettingsItem
                             defaultMessage='Help'
@@ -230,7 +230,7 @@ class Settings extends PureComponent {
                         />
                     </React.Fragment>
                     }
-                    <SettingsItem
+                     <SettingsItem
                         defaultMessage='Report a Problem'
                         i18nId={t('sidebar_right_menu.report')}
                         iconName='exclamation'
@@ -240,7 +240,7 @@ class Settings extends PureComponent {
                         theme={theme}
                         separator={true}
                         isLandscape={isLandscape}
-                    />
+                    /> */}
                     <SettingsItem
                         defaultMessage='Advanced Settings'
                         i18nId={t('mobile.advanced_settings.title')}
@@ -252,7 +252,7 @@ class Settings extends PureComponent {
                         separator={true}
                         isLandscape={isLandscape}
                     />
-                    {LocalConfig.EnableMobileClientUpgrade && LocalConfig.EnableMobileClientUpgradeUserSetting &&
+                    {/* {LocalConfig.EnableMobileClientUpgrade && LocalConfig.EnableMobileClientUpgradeUserSetting &&
                     <React.Fragment>
                         <SettingsItem
                             defaultMessage='Check for Upgrade'
@@ -269,7 +269,7 @@ class Settings extends PureComponent {
                     }
                     <SettingsItem
                         defaultMessage='About {appTitle}'
-                        messageValues={{appTitle: config.SiteName || 'Mattermost'}}
+                        messageValues={{appTitle: config.SiteName || 'Ares AIM'}}
                         i18nId={t('about.title')}
                         iconName='ios-information-circle'
                         iconType='ion'
@@ -278,7 +278,7 @@ class Settings extends PureComponent {
                         showArrow={showArrow}
                         theme={theme}
                         isLandscape={isLandscape}
-                    />
+                    /> */}
                     <View style={style.divider}/>
                 </ScrollView>
             </View>
