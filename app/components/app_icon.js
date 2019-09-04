@@ -3,10 +3,11 @@
 
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import Svg, {
-    G,
-    Path,
-} from 'react-native-svg';
+// import Svg, {
+//     G,
+//     Path,
+// } from 'react-native-svg';
+import Image from 'react-native';
 
 export default class AppIcon extends PureComponent {
     static propTypes = {
@@ -18,10 +19,10 @@ export default class AppIcon extends PureComponent {
     render() {
         return (
             <Image
-            style={{width: this.props.width, height: this.props.height}}
-            source={require('assets/base/images/logo.png')}
-                  
-                />
+                style={{width: this.props.width, height: this.props.height}}
+                source={require('assets/base/images/logo.png')}
+            />
+            
             // <Svg
             //     height={this.props.height}
             //     width={this.props.width}

@@ -20,7 +20,7 @@ import {changeOpacity, makeStyleSheetFromTheme} from 'app/utils/theme';
 import {isValidUrl} from 'app/utils/url';
 import {t} from 'app/utils/i18n';
 
-import LocalConfig from 'assets/config';
+// import LocalConfig from 'assets/config';
 
 class Settings extends PureComponent {
     static propTypes = {
@@ -167,7 +167,7 @@ class Settings extends PureComponent {
         const {config, joinableTeams, theme, isLandscape} = this.props;
         const style = getStyleSheet(theme);
         const showTeams = joinableTeams.length > 0;
-        const showHelp = isValidUrl(config.HelpLink);
+        // const showHelp = isValidUrl(config.HelpLink);
         const showArrow = Platform.OS === 'ios';
 
         return (
