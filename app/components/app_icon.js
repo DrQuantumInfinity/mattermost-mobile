@@ -3,7 +3,10 @@
 
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import Image from 'react-native';
+import {
+    Image,
+    View,
+} from 'react-native';
 
 export default class AppIcon extends PureComponent {
     static propTypes = {
@@ -13,6 +16,7 @@ export default class AppIcon extends PureComponent {
     };
 
     render() {
+        const style = getStyleSheet(theme);
         icon = (
             <Image
                 style={{width: this.props.width, height: this.props.height}}
