@@ -13,11 +13,16 @@ export default class AppIcon extends PureComponent {
     };
 
     render() {
-        return (
+        icon = (
             <Image
                 style={{width: this.props.width, height: this.props.height}}
                 source={require('assets/images/logo.png')}
             />
+        );
+        return (
+            <View style={[style.container, {width: this.props.width, height: this.props.height}]}>
+                {icon}
+            </View>
         );
     }
 }
