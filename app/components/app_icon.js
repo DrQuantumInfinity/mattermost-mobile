@@ -17,6 +17,7 @@ export default class AppIcon extends PureComponent {
 
     render() {
         const style = getStyleSheet(theme);
+        let icon;
         icon = (
             <Image
                 style={{width: this.props.width, height: this.props.height}}
